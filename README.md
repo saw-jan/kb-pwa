@@ -1,2 +1,2 @@
 # nkb
-Nepal Khristiya Bhajan. A progressive web app for all platforms that runs offline.
+Nepal Khristiya Bhajan. A progressive web app for all mobile platforms that runs offline.
