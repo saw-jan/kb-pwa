@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nepali Khristian Bhajan</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/single.css">
+    <!--Web app props-->
+		<meta name="theme-color" content="#009383">
+		<link rel="manifest" href="manifest.json">
+		<script>var pageid=1;</script>
+</head>
+<body id="body">
+	<!--navigation head-->
+	<header id="header">
+		<div id="main">
+		<div class="toolbar">
+		  <h1 id="apptitle">Nepali Khristian Bhajan</h1>
+		  <div class="search">
+			  <input type="text" onfocus="this.value=''" name="search" id="find" value="" placeholder="Search">
+		  </div>
+		</div>
+		<div class="tabs">
+		  	<a id="bhajan">
+				<div class="tab t1">
+		  		<h2>BHAJAN</h2>
+				</div>
+			</a>
+			<a id="chorus">
+				<div class="tab t2">
+				<h2>CHORUS</h2>
+				</div>
+			</a>
+			<a id="bal">
+				<div class="tab t3">
+				<h2>BAAL CHORUS</h2>
+				</div>
+			</a>
+		</div>
+	</div>
+		<!--single-->
+		<div id="single">
+		<div class="toolbar">
+        <div>
+          <h1><a onclick="goBack()"><span id="back"><img src="bin/bk.png"></span></a><span id="stitle"><span></span></h1>
+        </div>
+        <!--<div class="search n">
+          <input type="text" onfocus="this.value=''" name="search" id="find" value="" placeholder="Search">
+        </div>-->
+      </div>
+		<div class="nxt-pre">
+        <a onclick="prev()"><div class="arrow" id="left"><img src="bin/left.png"></div></a>
+        <div id="cat"></div>
+        <a onclick="next()"><div class="arrow" id="right"><img src="bin/right.png"></div></a>
+		</div>
+	</div>
+	</header>
+	<!--Song List-->
+	<div class="content">
+			<ul id="searchList"></ul>
+			<ul id="songList"></ul>
+	</div>
+	<!--single song-->
+	<div class="onesong" id="onesong">
+	</div>
+<!--scripts-->
+<script src="js/jquery.js"></script>
+<script src="js/swiped-events.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/main.js"></script>
+<script>
+	$(document).ready(()=>{
+		getBhajan();
+	});
+</script>
+</body>
+</html>
