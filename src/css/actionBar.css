@@ -1,0 +1,125 @@
+/* action-bar css */
+.action-bar{
+    position: fixed;
+    height:56px;
+    display: grid;
+    grid-template-columns: 56px auto 56px;
+    background-color: var(--primary);
+    color: var(--foreground);
+    box-shadow:0 2px 5px -1px rgba(0,0,0,.1);
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+.action-bar.ac-search{
+    display: grid;
+    grid-template-columns: 56px auto;
+}
+.action-bar .col1{
+    margin: 10px 0 10px 16px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+.action-bar .col1 .menu{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.action-bar .col1 .menu img{
+    width: 16px;
+}
+.action-bar .col1 .menu .logo{
+    width: 26px;
+}
+.action-bar .col2{
+    display: flex;
+    align-items: center;
+    /* background-color: aquamarine; */
+}
+.app-title{
+    font-size: 1.5em;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+.action-bar .col3{
+    margin: 10px 6px 10px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: black; */
+}
+.action-bar .col3.search{
+    margin: 10px 16px 10px 0;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.action-bar .col3 .search-btn{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 2px 10px;
+    /* background-color: antiquewhite; */
+}
+.action-bar .col3.search .search-btn{
+    position: relative;
+    left: 10px;
+    padding: 0;
+    color: var(--foreground-dim);
+}
+.search input[type="text"]{
+    margin-left: -20px;
+    height: 95%;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    padding-left: 38px;
+    outline: none;
+    background-color: var(--primary-light);
+    color: var(--foreground);
+}
+input[type="text"]::placeholder{
+    color: var(--foreground-dim);
+}
+.action-bar.single{
+    position: fixed;
+    height:56px;
+    display: grid;
+    grid-template-columns: 56px auto 56px;
+    background-color: var(--primary-dark);
+    color: var(--foreground);
+    box-shadow:0 2px 5px -1px rgba(0,0,0,.1);
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+.single .col1 {
+    margin: 10px 0 10px 16px;
+    padding: 0;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.single .col2{  
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.single .song-title{
+    font-size: 1.1em;
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 2px;
+    /* background-color: aqua; */
+}
+.single .song-title::after{
+    content: '...';
+}

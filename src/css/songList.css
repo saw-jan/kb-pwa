@@ -1,0 +1,117 @@
+.song-list{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--foreground);
+    left: 0;
+    top: 101px;
+}
+.song-list .bhajan{
+    width: 100vw;
+    transition: left .3s ease-out;
+    overflow: hidden;
+    left: 0;
+}
+.song-list .bhajan.active{
+    position: absolute;
+    left: 0;
+}
+.song-list .bhajan.inactive-100{
+    position: absolute;
+    left: -100%;
+}
+.song-list .bhajan.inactive-200{
+    position: absolute;
+    left: -200%;
+}
+.song-list .bhajan.inactive-300{
+    position: absolute;
+    left: -300%;
+}
+.song-list .chorus{
+    width: 100vw;
+    left: 100%;
+    transition: left .3s ease-out;
+}
+.song-list .chorus.active{
+    position: absolute;
+    left: 0;
+}
+.song-list .chorus.inactive--100{
+    position: absolute;
+    left: 100%;
+}
+.song-list .chorus.inactive-100{
+    position: absolute;
+    left: -100%;
+}
+.song-list .chorus.inactive-200{
+    position: absolute;
+    left: -200%;
+}
+.song-list .bal-chorus{
+    width: 100vw;
+    left: 200%;
+    transition: left .3s ease-out;
+}
+.song-list .bal-chorus.active{
+    position: absolute;
+    left: 0;
+}
+.song-list .bal-chorus.inactive--200{
+    position: absolute;
+    left: 200%;
+}
+.song-list .bal-chorus.inactive--100{
+    position: absolute;
+    left: 100%;
+}
+.song-list .bal-chorus.inactive-100{
+    position: absolute;
+    left: -100%;
+}
+.song-list .more{
+    width: 100vw;
+    left: 300%;
+    transition: left .3s ease-out;
+}
+.song-list .more.active{
+    position: absolute;
+    left: 0;
+}
+.song-list .more.inactive--300{
+    position: absolute;
+    left: 300%;
+}
+.song-list .more.inactive--200{
+    position: absolute;
+    left: 200%;
+}
+.song-list .more.inactive--100{
+    position: absolute;
+    left: 100%;
+}
+.list{
+    display: grid;
+    grid-template-columns: 11% auto;
+    font-size: 100%;
+    padding: 7px 5px 7px 8%;
+    text-decoration: none;
+    color: var(--text-foreground);
+    border-bottom: solid 1px rgba(150,150,150,.2);
+}
+.list:hover{
+    opacity: .5;
+}
+.list span{
+    font-size: 100%;
+}
+.list .title{
+    width: 98%;
+    overflow: hidden;
+    white-space: nowrap;
+}

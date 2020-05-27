@@ -1,0 +1,48 @@
+.toolbar{
+    position: fixed;
+    height: 40px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary);
+    color: var(--foreground);
+    width: 100vw;
+    left: 0;
+    top: 56px;
+}
+.toolbar .col1{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    /* background-color: red; */
+}
+.toolbar .col2{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--foreground);
+    /* background-color: blue; */
+}
+.toolbar .col3{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8em;
+    font-weight: bold;
+    color: var(--primary-dark);
+    /* background-color: red; */
+}
+.toolbar .col4{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    /* background-color: blue; */
+}

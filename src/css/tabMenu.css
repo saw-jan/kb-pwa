@@ -1,0 +1,90 @@
+.tab-menu{
+    position: fixed;
+    height: 40px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary);
+    color: var(--foreground);
+    width: 100vw;
+    left: 0;
+    top: 56px;
+}
+.tab-menu .tab{
+    background-position: center;
+    transition: background 0.4s ease-out;
+}
+.tab-menu .tab:hover {
+    background-color: var(--primary);
+    background-image: radial-gradient(circle, transparent 1%, var(--primary) 1%);
+    background-position: center;
+    background-size: 15000%;
+  }
+.tab-menu .tab:active{
+    background-color: var(--primary-light);
+    background-size: 100%;
+    transition:  background 0s;
+}
+.tab-menu .tab label{
+    flex: 4.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground-dim)
+}
+.tab-menu .tab .active-tab{
+    color: var(--foreground);
+    transition: all 0s ease-in-out;
+}
+.tab-menu .tab span{
+    flex: .5;
+}
+.tab-menu .col1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: center;
+}
+
+.tab-menu .col2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: center;
+}
+.tab-menu .col3{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: center;
+}
+.tab-menu .col4{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: center;
+}
+.tab-menu .tab .active{
+    position: relative;
+    transition: all .4s ease-out;
+    background-color:  var(--accent);
+}
+.tab-menu .tab .active-0{
+    left: 0%;
+}
+.tab-menu .tab .active-100{
+    left: 100%;
+}
+.tab-menu .tab .active-200{
+    left: 200%;
+}
+.tab-menu .tab .active-300{
+    left: 300%;
+}
+.tab-menu .tab label{
+    font-size: .8em;
+}
