@@ -12,6 +12,9 @@
 }
 .song-list .bhajan{
     width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 100px;
     transition: left .3s ease-out;
     overflow: hidden;
     left: 0;
@@ -35,6 +38,9 @@
 .song-list .chorus{
     width: 100vw;
     left: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 100px;
     transition: left .3s ease-out;
 }
 .song-list .chorus.active{
@@ -56,6 +62,10 @@
 .song-list .bal-chorus{
     width: 100vw;
     left: 200%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 100px;
+    /* background-color: aqua; */
     transition: left .3s ease-out;
 }
 .song-list .bal-chorus.active{
@@ -76,8 +86,16 @@
 }
 .song-list .more{
     width: 100vw;
+    height: 80vh;
     left: 300%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 100px;
     transition: left .3s ease-out;
+    /* background-color: antiquewhite; */
+}
+.more::-webkit-scrollbar { 
+    display: none; 
 }
 .song-list .more.active{
     position: absolute;

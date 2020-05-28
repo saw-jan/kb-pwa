@@ -12,8 +12,10 @@ export  const GlobalProvider = props => {
     const [hymns, searchedHymns] = useState(bhajan);
     const [choruses, searchedChorus] = useState(chorus);
     const [bChoruses, searchedBalChorus] = useState(balChorus);
-    const toggleTab = tab => {
+    const [activeTabClass, setActiveTabClass] = useState('active-0');
+    const toggleTab = (tab, tabClass) => {
         setActiveTab(tab);
+        setActiveTabClass(tabClass);
     }
     const toggleSearch = (value, cancel = '') => {
         setIsSearch(value);
@@ -46,7 +48,7 @@ export  const GlobalProvider = props => {
         )
     }
     return(
-        <GlobalContext.Provider value={{activeTab, isSearch, searchInput, toggleTab, toggleSearch, getSearchInput, hymns, choruses, bChoruses}}>
+        <GlobalContext.Provider value={{activeTab, activeTabClass, isSearch, searchInput, toggleTab, toggleSearch, getSearchInput, hymns, choruses, bChoruses}}>
             {props.children}
         </GlobalContext.Provider>
     )

@@ -1,23 +1,30 @@
 import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
+import { Swipeable } from 'react-swipeable'
 import HymnData from './Hymns';
 import ChorusData from './Chorus';
 import BalChorusData from './BalChorus';
 import '../css/songList.css';
 
 const SongList = () => {
-    const {activeTab} = useContext(GlobalContext);
+    const {activeTab, toggleTab} = useContext(GlobalContext);
     return(
         <div className="song-list">
-            <Bhajan activeTab={activeTab}/>
-            <Chorus activeTab={activeTab}/>
-            <BalChorus activeTab={activeTab}/>
-            <More activeTab={activeTab}/>
+            <Bhajan activeTab={activeTab} toggleTab={toggleTab}/>
+            <Chorus activeTab={activeTab} toggleTab={toggleTab}/>
+            <BalChorus activeTab={activeTab} toggleTab={toggleTab}/>
+            <More activeTab={activeTab} toggleTab={toggleTab}/>
         </div>
     )
 }
 
-const Bhajan = ({activeTab}) => {
+const Bhajan = ({activeTab, toggleTab}) => {
+    const config = {
+        onSwipedLeft: () => toggleTab('2', 'active-100'),
+        onSwipedRight: () => false,
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    };
     const getMeClass = activeTab => {
         switch(activeTab){
             case '1':
@@ -31,12 +38,20 @@ const Bhajan = ({activeTab}) => {
         }  
     }
     return(
+        <Swipeable {...config}>
         <div className={"bhajan "+getMeClass(activeTab)}>
             <HymnData />
         </div>
+        </Swipeable>
     )
 }
-const Chorus = ({activeTab}) => {
+const Chorus = ({activeTab, toggleTab}) => {
+    const config = {
+        onSwipedLeft: () => toggleTab('3', 'active-200'),
+        onSwipedRight: () => toggleTab('1', 'active-0'),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    };
     const getMeClass = activeTab => {
         switch(activeTab){
             case '1':
@@ -50,12 +65,20 @@ const Chorus = ({activeTab}) => {
         }  
     }
     return(
+        <Swipeable {...config}>
         <div className={"chorus "+getMeClass(activeTab)}>
             <ChorusData />
         </div>
+        </Swipeable>
     )
 }
-const BalChorus = ({activeTab}) => {
+const BalChorus = ({activeTab, toggleTab}) => {
+    const config = {
+        onSwipedLeft: () => toggleTab('4', 'active-300'),
+        onSwipedRight: () => toggleTab('2', 'active-100'),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    };
     const getMeClass = activeTab => {
         switch(activeTab){
             case '1':
@@ -69,12 +92,20 @@ const BalChorus = ({activeTab}) => {
         }  
     }
     return(
+        <Swipeable {...config}>
         <div className={"bal-chorus "+getMeClass(activeTab)}>
             <BalChorusData />
         </div>
+        </Swipeable>
     )
 }
-const More = ({activeTab}) => {
+const More = ({activeTab, toggleTab}) => {
+    const config = {
+        onSwipedLeft: () => false,
+        onSwipedRight: () => toggleTab('3', 'active-200'),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    };
     const getMeClass = activeTab => {
         switch(activeTab){
             case '1':
@@ -88,9 +119,11 @@ const More = ({activeTab}) => {
         }  
     }
     return(
+        <Swipeable {...config}>
         <div className={"more "+getMeClass(activeTab)}>
             <h1>More</h1>
         </div>
+        </Swipeable>
     )
 }
 export default SongList;

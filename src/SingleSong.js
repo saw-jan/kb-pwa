@@ -74,7 +74,7 @@ const SingleSong = ({ match }) => {
         <div className="wrapper">
             <ActionBar title={thisSong.title} />
             <ToolBar nextSong={nextSong} previousSong={previousSong} catNum={`${thisSong.category} - ${thisSong.no}`} scaleTaal={`${String(thisSong.scale).replace("null","-")} | ${String(thisSong.taal).replace("null","-")}`} lyrics={thisSong.lyrics} />
-            <Song lyrics={thisSong.lyrics} />
+            <Song lyrics={thisSong.lyrics} nextSong={nextSong} previousSong={previousSong}/>
         </div>
     )
 }
