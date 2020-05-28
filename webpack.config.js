@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
         historyApiFallback: true,
         port: 3000,
         hot: true,
-        open: true,
+        open: 'chrome',
         https: false
     },
     entry: './src/index.js',
@@ -53,6 +54,15 @@ module.exports = {
             template: './src/index.html',
             filename: './index.html',
             favicon: './src/favicon.ico'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'src/sw.js' },
+                { from: 'src/icons/launcher_512.png' },
+                { from: 'src/icons/launcher_192.png' },
+                { from: 'src/manifest.json' },
+                { from: 'src/offline.html' }
+            ]
         })
     ]
 }

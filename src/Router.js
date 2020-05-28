@@ -9,8 +9,8 @@ const AppContainer = () => {
             <Switch>
                 {/* <Route path="/" component={SingleSong} /> */}
                 <Route path="/" exact component={MainApp} />
-                <Route path="/single/:category/:id" exact component={SingleSong} />
-                <Route component={SingleSong} />
+                <Route path="/single/:category/:id" component={SingleSong} />
+                <Route component={MainApp} />
             </Switch>
         </Router>
     )
