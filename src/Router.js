@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import { Route, HashRouter as Router, Switch, Redirect } from 'react-router-dom';
 import MainApp from './MainApp';
 import SingleSong from './SingleSong';
 
