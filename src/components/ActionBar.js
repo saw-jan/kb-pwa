@@ -3,6 +3,7 @@ import { GlobalContext } from '../context/GlobalContext';
 import IosSearch from 'react-ionicons/lib/IosSearch'
 import MdClose from 'react-ionicons/lib/MdClose'
 import IosBook from 'react-ionicons/lib/IosBook'
+import Logo from './LogoIcon';
 import '../css/actionBar.css';
 
 const ActionBar = () => {
@@ -23,7 +24,7 @@ const ActionBar = () => {
         <div className={isSearch?"action-bar ac-search":"action-bar"}>
             <div className="col1">
                 {(()=>{if(!isSearch){
-                        return(<span className="menu"><IosBook fontSize="25px" color="#ffffff" /></span>)
+                        return(<span className="menu"><Logo width="25px" /></span>)
                     }else{
                         return(<span className="menu" onClick={onCancel}><MdClose fontSize="25px" color="#ffffff" /></span>);
                     }

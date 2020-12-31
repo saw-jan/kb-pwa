@@ -34,7 +34,7 @@ module.exports = {
                     ]
             },
             {
-                test: /\.(ico|png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
+                test: /\.(ico|png|jpg|gif|eot|ttf|woff|woff2)$/,
                 use: {
                     loader: 'file-loader'
                 }
@@ -45,7 +45,11 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+            },
         ]
     },
     plugins: [

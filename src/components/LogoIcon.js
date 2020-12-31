@@ -1,8 +1,10 @@
 import React from 'react';
+import Logo from '../icons/icon.svg';
 
-const LogoIcon = () => {
+const LogoIcon = ({width="24px", height="auto"}) => {
     return(
-        <div className="">
+        <div>
+            <Logo width={width} height={height} />
         </div>
     )
 }
