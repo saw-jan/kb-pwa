@@ -9,9 +9,19 @@
     "background_color": "#ffffff",
     "icons": [
         {
-            "src": "launcher_512.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
+			"src": "launcher_128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "launcher_192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "launcher_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
     ]
 }
