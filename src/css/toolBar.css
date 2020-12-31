@@ -16,7 +16,6 @@
     align-items: center;
     justify-content: center;
     margin-left: 16px;
-    /* background-color: red; */
 }
 .toolbar .col2{
     flex: 3;
@@ -26,7 +25,6 @@
     font-size: 1em;
     font-weight: bold;
     color: var(--foreground);
-    /* background-color: blue; */
 }
 .toolbar .col3{
     flex: 2;
@@ -35,8 +33,7 @@
     align-items: center;
     font-size: .8em;
     font-weight: bold;
-    color: var(--primary-dark);
-    /* background-color: red; */
+    color: var(--dim-gray);
 }
 .toolbar .col4{
     flex: 1;
@@ -44,5 +41,4 @@
     align-items: center;
     justify-content: center;
     margin-right: 16px;
-    /* background-color: blue; */
 }

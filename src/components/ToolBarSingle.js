@@ -4,6 +4,7 @@ import MdArrowForward from 'react-ionicons/lib/MdArrowForward'
 import '../css/toolBar.css';
 
 var parseHTML = require('html-react-parser');
+const COLOR = "#FFFFFF";
 
 const ToolBarSingle = (props) => {
     const nextSong = () => {
@@ -15,7 +16,7 @@ const ToolBarSingle = (props) => {
     return(
         <div className="toolbar">
             <div className="col1">
-                <MdArrowBack onClick={previousSong} fontSize="20px" color="#00632b" />
+                <MdArrowBack onClick={previousSong} fontSize="20px" color={COLOR} />
             </div>
             <div className="col2">
                 {props.catNum}
@@ -30,7 +31,7 @@ const ToolBarSingle = (props) => {
                 })()}
             </div>
             <div className="col4">
-                <MdArrowForward onClick={nextSong} fontSize="20px" color="#00632b" />
+                <MdArrowForward onClick={nextSong} fontSize="20px" color={COLOR} />
             </div>
         </div>
     )
