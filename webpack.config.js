@@ -58,6 +58,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: 'src/sw.js' },
+                { from: 'src/icons/launcher_128.png' },
                 { from: 'src/icons/launcher_512.png' },
                 { from: 'src/icons/launcher_192.png' },
                 { from: 'src/manifest.json' },
