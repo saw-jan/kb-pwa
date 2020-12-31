@@ -73,9 +73,9 @@
 }
 .search input[type="text"]{
     margin-left: -20px;
-    height: 95%;
+    height: 80%;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     border-radius: 40px;
     padding-left: 38px;
@@ -84,7 +84,7 @@
     color: var(--foreground);
 }
 input[type="text"]::placeholder{
-    color: var(--foreground-dim);
+    color: var(--placeholder-color);
 }
 .action-bar.single{
     position: fixed;

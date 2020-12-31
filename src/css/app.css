@@ -1,11 +1,12 @@
 :root {
 	--primary-dark: #008d3d;
 	--primary: #00a347;
-	--primary-light: #32b66b;
+	--primary-light: #1ac062;
 	--accent: #ffa300;
 	--foreground: #ffffff;
 	--text-foreground: #222;
 	--foreground-dim: #a4d4ba;
+	--placeholder-color: #d7ffe9;
 }
 html,
 body {
