@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import { Swipeable } from 'react-swipeable';
+import EmptyList from './EmptyList';
 import HymnData from './Hymns';
 import ChorusData from './Chorus';
 import BalChorusData from './BalChorus';
@@ -121,7 +122,7 @@ const More = ({ activeTab, toggleTab }) => {
 	return (
 		<Swipeable {...config}>
 			<div className={'more ' + getMeClass(activeTab)}>
-				<h1>More</h1>
+				<EmptyList />
 			</div>
 		</Swipeable>
 	);

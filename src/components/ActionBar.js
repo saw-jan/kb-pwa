@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from '../context/GlobalContext';
 import IosSearch from 'react-ionicons/lib/IosSearch'
 import MdClose from 'react-ionicons/lib/MdClose'
-import IosBook from 'react-ionicons/lib/IosBook'
 import Logo from './LogoIcon';
 import '../css/actionBar.css';
 
