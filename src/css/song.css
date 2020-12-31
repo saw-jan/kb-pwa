@@ -3,6 +3,7 @@
     position: relative;
     width: 100vw;
     left: 0;
+    background: white;
 }
 .lyrics-wrap::-webkit-scrollbar { 
     display: none; 
@@ -11,11 +12,13 @@
     position: fixed;
     top: 101px;
     bottom: 0;
+    width: 100vw;
     font-size: 1.5em;
     text-align: center;
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    background: white;
 }
 .lyrics-wrap .lyrics::-webkit-scrollbar { 
     display: none; 

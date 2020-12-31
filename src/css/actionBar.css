@@ -85,7 +85,7 @@ input[type="text"]::placeholder{
     height:56px;
     display: grid;
     grid-template-columns: 56px auto 56px;
-    background-color: var(--primary-dark);
+    background-color: var(--primary);
     color: var(--foreground);
     box-shadow:0 2px 5px -1px rgba(0,0,0,.1);
     width: 100vw;

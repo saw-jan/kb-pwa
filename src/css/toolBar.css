@@ -1,10 +1,10 @@
 .toolbar{
     position: fixed;
-    height: 40px;
-    margin-top: 5px;
+    height: 45px;
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
-    background-color: var(--primary);
+    background-color: var(--primary-dark);
     color: var(--foreground);
     width: 100vw;
     left: 0;
