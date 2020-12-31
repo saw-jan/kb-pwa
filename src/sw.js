@@ -11,7 +11,6 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
         .then(cache => {
-            console.log('Cache opened');
             // initial caching
             return cache.addAll(OFFLINE_ASSETS);
         })
