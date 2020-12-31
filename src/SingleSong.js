@@ -72,14 +72,16 @@ const SingleSong = ({ match }) => {
 
 	return (
 		<div className='wrapper'>
-			<ActionBar title={thisSong.title} />
-			<ToolBar
-				nextSong={nextSong}
-				previousSong={previousSong}
-				catNum={`${thisSong.category} - ${thisSong.no}`}
-				scaleTaal={`${String(thisSong.scale).replace('null', '-')} | ${String(thisSong.taal).replace('null', '-')}`}
-				lyrics={thisSong.lyrics}
-			/>
+			<div className="header">
+				<ActionBar title={thisSong.title} />
+				<ToolBar
+					nextSong={nextSong}
+					previousSong={previousSong}
+					catNum={`${thisSong.category} - ${thisSong.no}`}
+					scaleTaal={`${String(thisSong.scale).replace('null', '-')} | ${String(thisSong.taal).replace('null', '-')}`}
+					lyrics={thisSong.lyrics}
+				/>
+			</div>
 			<Song lyrics={thisSong.lyrics} nextSong={nextSong} previousSong={previousSong} />
 		</div>
 	);

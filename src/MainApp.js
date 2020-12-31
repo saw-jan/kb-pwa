@@ -10,8 +10,10 @@ const MainApp = () => {
     return(
         <GlobalProvider>
             <div className="container">
-                <ActionBar />
-                <TabMenu />
+                <div className="header">
+                    <ActionBar />
+                    <TabMenu />
+                </div>
                 <SongList />
             </div>
         </GlobalProvider>

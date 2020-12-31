@@ -7,7 +7,6 @@
     overflow-x: hidden;
     background-color: var(--foreground);
     left: 0;
-    top: 101px;
 }
 .lyrics-wrap::-webkit-scrollbar { 
     display: none; 

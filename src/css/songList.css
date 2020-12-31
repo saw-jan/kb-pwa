@@ -8,7 +8,6 @@
     overflow-x: hidden;
     background-color: var(--foreground);
     left: 0;
-    top: 101px;
 }
 .song-list .bhajan{
     width: 100vw;
