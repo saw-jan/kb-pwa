@@ -9,7 +9,6 @@ module.exports = {
         historyApiFallback: true,
         port: 3000,
         hot: true,
-        open: 'chrome',
         https: false
     },
     entry: './src/index.js',
