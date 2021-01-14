@@ -9,8 +9,8 @@ import './css/app.css';
 const MainApp = () => {
   return (
     <GlobalProvider>
-      <div className='container'>
-        <div className='header'>
+      <div className="container">
+        <div className="header">
           <ActionBar />
           <TabMenu />
         </div>

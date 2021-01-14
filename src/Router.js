@@ -12,9 +12,9 @@ const AppContainer = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/:category/:id' component={SingleSong} />
-        <Route path='/' component={MainApp} />
-        <Redirect to='/' />
+        <Route exact path="/:category/:id" component={SingleSong} />
+        <Route path="/" component={MainApp} />
+        <Redirect to="/" />
       </Switch>
     </Router>
   );
