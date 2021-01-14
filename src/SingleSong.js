@@ -26,7 +26,7 @@ const SingleSong = ({ match }) => {
         setTotalSong(chorus.length);
         getThisChorus('Chorus', num);
         break;
-      case 'bChorus':
+      case 'balchorus':
         setTotalSong(balChorus.length);
         getThisBalChorus('Bal Chorus', num);
         break;
@@ -37,34 +37,22 @@ const SingleSong = ({ match }) => {
   };
 
   const getThisHymn = (category, num) => {
-    let song = bhajan.filter(
-      (song) =>
-        song.category === category && song.no.toString() === num.toString()
-    );
+    let song = bhajan.filter((song) => song.category === category && song.no.toString() === num.toString());
     setThisSong(song[0]);
   };
 
   const getThisChorus = (category, num) => {
-    let song = chorus.filter(
-      (song) =>
-        song.category === category && song.no.toString() === num.toString()
-    );
+    let song = chorus.filter((song) => song.category === category && song.no.toString() === num.toString());
     setThisSong(song[0]);
   };
 
   const getThisBalChorus = (category, num) => {
-    let song = balChorus.filter(
-      (song) =>
-        song.category == category && song.no.toString() === num.toString()
-    );
+    let song = balChorus.filter((song) => song.category == category && song.no.toString() === num.toString());
     setThisSong(song[0]);
   };
 
   const getThisOther = (category, num) => {
-    let song = bhajan.filter(
-      (song) =>
-        song.category === category && song.no.toString() === num.toString()
-    );
+    let song = bhajan.filter((song) => song.category === category && song.no.toString() === num.toString());
     setThisSong(song[0]);
   };
 
@@ -90,17 +78,11 @@ const SingleSong = ({ match }) => {
           nextSong={nextSong}
           previousSong={previousSong}
           catNum={`${thisSong.category} - ${thisSong.no}`}
-          scaleTaal={`${String(thisSong.scale).replace('null', '-')} | ${String(
-            thisSong.taal
-          ).replace('null', '-')}`}
+          scaleTaal={`${String(thisSong.scale).replace('null', '-')} | ${String(thisSong.taal).replace('null', '-')}`}
           lyrics={thisSong.lyrics}
         />
       </div>
-      <Song
-        lyrics={thisSong.lyrics}
-        nextSong={nextSong}
-        previousSong={previousSong}
-      />
+      <Song lyrics={thisSong.lyrics} nextSong={nextSong} previousSong={previousSong} />
     </div>
   );
 };
