@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import data from '../data/hymn.json';
 import { GlobalContext } from '../context/GlobalContext';
 import '../css/songList.css';
 
