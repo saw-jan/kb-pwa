@@ -15,8 +15,8 @@ const Song = (props) => {
   const lyrics = props.lyrics;
   return (
     <Swipeable {...config}>
-      <div className='lyrics-wrap'>
-        <div className='lyrics'>
+      <div className="lyrics-wrap">
+        <div className="lyrics">
           {(() => {
             if (lyrics) return parseHTML(lyrics);
           })()}

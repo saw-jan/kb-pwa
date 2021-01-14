@@ -8,4 +8,5 @@ const LogoIcon = ({ width = '24px', height = '24px' }) => {
     </div>
   );
 };
+
 export default LogoIcon;
