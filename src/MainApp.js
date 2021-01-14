@@ -7,17 +7,17 @@ import { GlobalProvider } from './context/GlobalContext';
 import './css/app.css';
 
 const MainApp = () => {
-    return(
-        <GlobalProvider>
-            <div className="container">
-                <div className="header">
-                    <ActionBar />
-                    <TabMenu />
-                </div>
-                <SongList />
-            </div>
-        </GlobalProvider>
-    )
-}
+  return (
+    <GlobalProvider>
+      <div className='container'>
+        <div className='header'>
+          <ActionBar />
+          <TabMenu />
+        </div>
+        <SongList />
+      </div>
+    </GlobalProvider>
+  );
+};
 
 export default MainApp;
