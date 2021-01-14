@@ -1,5 +1,5 @@
 const CACHE_NAME = 'kb-pwa';
-let OFFLINE_ASSETS = ['/', '/single', '/main.js', '/index.html'];
+let OFFLINE_ASSETS = ['/#/', '/main.js', '/index.html', '/offline.html'];
 
 // install serviceWorker
 self.addEventListener('install', (event) => {
@@ -14,7 +14,7 @@ self.addEventListener('install', (event) => {
 // activate serviceWorker
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.key().then((cacheNames) => {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
           // clearing old caches
@@ -27,22 +27,21 @@ self.addEventListener('activate', (event) => {
 
 // feed Cached data
 self.addEventListener('fetch', (event) => {
+  console.log(event.request.url);
   event.respondWith(
     caches
       .open(CACHE_NAME)
-      .then((cache) => {
+      .then(async (cache) => {
         // feed from cache
-        return cache.match(event.request).then((response) => {
-          // feed from network
-          return (
-            response ||
-            fetch(event.request).then((response) => {
-              // cache new data
-              cache.put(event.request, response.clone());
-              return response;
-            })
-          );
-        });
+        const response = await cache.match(event.request);
+        return (
+          response ||
+          fetch(event.request).then((response_1) => {
+            // cache new data
+            cache.put(event.request, response_1.clone());
+            return response_1;
+          })
+        );
       })
       .catch(function () {
         // If both fail, show a generic fallback:
