@@ -7,9 +7,9 @@ const Chorus = () => {
   return (
     <div>
       {choruses.map(({ id, no, title }) => (
-        <Link to={`/${'chorus'}/${no}`} className='list' key={id}>
+        <Link to={`/${'chorus'}/${no}`} className="list" key={id}>
           <span>{no}. </span>
-          <div className='title'>{title}</div>
+          <div className="title">{title}</div>
         </Link>
       ))}
     </div>

@@ -8,9 +8,9 @@ const Hymns = () => {
   return (
     <div>
       {hymns.map(({ id, no, title }) => (
-        <Link to={`/${'hymn'}/${no}`} className='list' key={id}>
+        <Link to={`/${'hymn'}/${no}`} className="list" key={id}>
           <span>{no}. </span>
-          <div className='title'>{title}</div>
+          <div className="title">{title}</div>
         </Link>
       ))}
     </div>

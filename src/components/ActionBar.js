@@ -6,13 +6,7 @@ import Logo from './LogoIcon';
 import '../css/actionBar.css';
 
 const ActionBar = () => {
-  const {
-    activeTab,
-    isSearch,
-    toggleSearch,
-    searchInput,
-    getSearchInput,
-  } = useContext(GlobalContext);
+  const { activeTab, isSearch, toggleSearch, searchInput, getSearchInput } = useContext(GlobalContext);
   const [searchText, setSearchText] = useState('');
   const searchClick = () => {
     toggleSearch(true);

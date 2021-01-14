@@ -7,9 +7,9 @@ const BalChorus = () => {
   return (
     <div>
       {bChoruses.map(({ id, no, title }) => (
-        <Link to={`/${'bChorus'}/${no}`} className='list' key={id}>
+        <Link to={`/${'balchorus'}/${no}`} className="list" key={id}>
           <span>{no}. </span>
-          <div className='title'>{title}</div>
+          <div className="title">{title}</div>
         </Link>
       ))}
     </div>
