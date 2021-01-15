@@ -1,18 +1,13 @@
 const CACHE_NAME = 'kb-pwa';
-let OFFLINE_ASSETS = ['/#/', '/main.js', '/index.html', '/offline.html'];
+let OFFLINE_ASSETS = ['/', '/main.js', '/index.html', '/offline.html'];
 
 // install serviceWorker
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches
-      .open(CACHE_NAME)
-      .then((cache) => {
-        // initial caching
-        return cache.addAll(OFFLINE_ASSETS);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      })
+    caches.open(CACHE_NAME).then((cache) => {
+      // initial caching
+      return cache.addAll(OFFLINE_ASSETS);
+    })
   );
 });
 
@@ -45,12 +40,11 @@ self.addEventListener('fetch', (event) => {
       .then((cache) => {
         // feed from cache
         return (
-          cache.match(event.request) ||
-          fetch(event.request).then((response_1) => {
+          fetch(event.request).then((response) => {
             // cache new data
-            cache.put(event.request, response_1.clone());
-            return response_1;
-          })
+            cache.put(event.request, response.clone());
+            return response;
+          }) || cache.match(event.request)
         );
       })
       .catch(function () {
