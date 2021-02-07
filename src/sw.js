@@ -40,11 +40,12 @@ self.addEventListener('fetch', (event) => {
       .then((cache) => {
         // feed from cache
         return (
+          cache.match(event.request) ||
           fetch(event.request).then((response) => {
             // cache new data
             cache.put(event.request, response.clone());
             return response;
-          }) || cache.match(event.request)
+          })
         );
       })
       .catch(function () {
