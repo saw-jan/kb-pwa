@@ -63,12 +63,13 @@
     <script>
       const url = window.location.href;
       const regex = /https?\:\/\/(www\.)?[a-z0-9]+(\:[0-9]{4}|\.[a-z]{3})(\.[a-z]{2}|\:[0-9]{4})?/;
-      let path = url.replace(regex, '')
+      let path = url.replace(regex, '');
       path = path.replace('#/', '');
+      const sw = path + 'sw.js';
       // registering serviceWorker
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js', { scope: path }).catch((err) => {
+          navigator.serviceWorker.register(sw, { scope: path }).catch((err) => {
             console.log(`error: ${err}`);
           });
         });
